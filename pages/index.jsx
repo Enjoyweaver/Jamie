@@ -3,10 +3,14 @@ import { ethers } from "ethers";
 import Head from 'next/head'
 import React, { useEffect, useState } from "react";
 import styles from '../styles/Home.module.css'
+import img2756 from '../public/IMG_2756.jpg';
+import img2757 from '../public/IMG_2757.jpg';
+import img2766 from '../public/IMG_2766.jpg';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   // Contract Address & ABI
-  const contractAddress = "0xDBa03676a2fBb6711CB652beF5B7416A53c1421D";
+  const contractAddress = "to be added";
   const contractABI = abi.abi;
 
   // Component state
@@ -84,7 +88,7 @@ export default function Home() {
 
         console.log("mined ", coffeeTxn.hash);
 
-        console.log("coffee purchased!");
+        console.log("Art Received!");
 
         // Clear the form fields.
         setName("");
@@ -162,87 +166,124 @@ export default function Home() {
       }
     }
   }, []);
-  
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Buy Albert a Coffee!</title>
+        <title>Jamie's Art</title>
         <meta name="description" content="Tipping site" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <link rel="icon" href="/IMG_2757.jpg" />
+      </Head>  
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Buy Albert a Coffee!
-        </h1>
-        
-        {currentAccount ? (
-          <div>
-            <form>
-              <div class="formgroup">
-                <label>
-                  Name
-                </label>
-                <br/>
-                
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="anon"
-                  onChange={onNameChange}
-                  />
-              </div>
-              <br/>
-              <div class="formgroup">
-                <label>
-                  Send Albert a message
-                </label>
-                <br/>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <h2 className={styles.title}>About Jamie</h2>
+          <p style={{ maxWidth: '600px', textAlign: 'center' }}>
+            Jamie is an artist creating physical pieces that 
+            will be transformed into digital art for collectors to purchase. Each digital art piece is one-of-a-kind, and only one version is available for purchase.
+          </p>
+          <h2 className={styles.title} style={{ marginTop: '20px', textAlign: 'center' }}>
+            A few examples 
+          </h2>
+          
 
-                <textarea
-                  rows={3}
-                  placeholder="Enjoy your coffee!"
-                  id="message"
-                  onChange={onMessageChange}
-                  required
-                >
-                </textarea>
-              </div>
-              <div>
-                <button
-                  type="button"
-                  onClick={buyCoffee}
-                >
-                  Send 1 Coffee for 0.001ETH
-                </button>
-              </div>
-            </form>
+        </main>
+
+        <div className={styles.artworkContainer}>
+          <img src="/IMG_2756.jpg" alt="IMG 2756" className={styles.artwork} />
+          <img src="/IMG_2757.jpg" alt="IMG 2757" className={styles.artwork} />
+          <img src="/IMG_2766.jpg" alt="IMG 2766" className={styles.artwork} />
+        </div>
+
+        <section  style={{ marginTop: '50px', marginBottom: '40px', textAlign: 'center' }}>
+          <h1 className={styles.title} style={{ marginTop: '20px', marginBottom: '40px', textAlign: 'center' }}>Future Art</h1>
+          <div className={styles.artworkContainer}>
+            <img src="/IMG_2772.jpg" alt="IMG 2772" className={styles.artwork} />
+            <img src="/IMG_2764.jpg" alt="IMG 2764" className={styles.artwork} />
+            <img src="/IMG_2771.jpg" alt="IMG 2771" className={styles.artwork} />
           </div>
-        ) : (
-          <button onClick={connectWallet}> Connect your wallet </button>
-        )}
-      </main>
 
-      {currentAccount && (<h1>Memos received</h1>)}
-
-      {currentAccount && (memos.map((memo, idx) => {
-        return (
-          <div key={idx} style={{border:"2px solid", "border-radius":"5px", padding: "5px", margin: "5px"}}>
-            <p style={{"font-weight":"bold"}}>"{memo.message}"</p>
-            <p>From: {memo.name} at {memo.timestamp.toString()}</p>
+          <div className={styles.artworkContainer}>
+            <img src="/IMG_2759.jpg" alt="IMG 2759" className={styles.artwork} />
+            <img src="/IMG_2769.jpg" alt="IMG 2769" className={styles.artwork} />
+            <img src="/IMG_2768.jpg" alt="IMG 2768" className={styles.artwork} />
           </div>
-        )
-      }))}
+        </section>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://alchemy.com/?a=roadtoweb3weektwo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by @thatguyintech for Alchemy's Road to Web3 lesson two!
-        </a>
-      </footer>
+        {currentAccount && (<h1>Memos received</h1>)}
+
+        {currentAccount && (memos.map((memo, idx) => {
+          return (
+            <div key={idx} style={{border:"2px solid", "border-radius":"5px", padding: "5px", margin: "5px"}}>
+              <p style={{"font-weight":"bold"}}>"{memo.message}"</p>
+              <p>From: {memo.name} at {memo.timestamp.toString()}</p>
+            </div>
+          )
+        }))}
+
+
+      <h2 className={styles.title} style={{ marginTop: '100px', marginBottom: '20px',  textAlign: 'center' }}>
+        If you'd like, you can donate to Jamie's art fund below.
+      </h2>
+
+        <div style={{ marginBottom: '100px', textAlign: 'center' }} >
+          {currentAccount ? (
+            <div>
+              <form>
+                <div class="formgroup">
+                  <label>
+                    Name
+                  </label>
+                  <br/>
+                  
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="anon"
+                    onChange={onNameChange}
+                    />
+                </div>
+                <br/>
+                <div class="formgroup">
+                  <label>
+                    Send Jamie a message
+                  </label>
+                  <br/>
+
+                  <textarea
+                    rows={3}
+                    placeholder="Enjoy your vape!"
+                    id="message"
+                    onChange={onMessageChange}
+                    required
+                  >
+                  </textarea>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    onClick={buyCoffee}
+                  >
+                    Send 0.001ETH For Vape
+                  </button>
+                </div>
+              </form>
+            </div>
+          ) : (
+            <button onClick={connectWallet}> Connect Wallet</button>
+          )}
+        </div>  
+
+        <footer className={styles.footer}>
+          <a
+            href="https://twitter.com/enjoy_weaver"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Created by @enjoyweaver
+          </a>
+        </footer>
+      </div>
     </div>
   )
 }

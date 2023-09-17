@@ -1,2 +1,4 @@
-run = 'npm run dev'
-entrypoint = 'pages/index.jsx'
+run = "npm run dev"
+
+[nix]
+channel = "stable-22_05"
