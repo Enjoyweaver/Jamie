@@ -170,7 +170,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Jamie's Art</title>
+        <title>Jamie&apos;s Art</title>
         <meta name="description" content="Tipping site" />
         <link rel="icon" href="/IMG_2757.jpg" />
       </Head>  
@@ -223,7 +223,7 @@ export default function Home() {
 
 
       <h2 className={styles.title} style={{ marginTop: '100px', marginBottom: '20px',  textAlign: 'center' }}>
-        If you'd like, you can donate to Jamie's art fund below.
+        If you'd like, you can donate to Jamie&apos;s art fund below.
       </h2>
 
         <div style={{ marginBottom: '100px', textAlign: 'center' }} >
