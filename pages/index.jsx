@@ -170,7 +170,7 @@ export default function Home() {
       <Head>
         <title>Jamie&apos;s Art</title>
         <meta name="description" content="Tipping site" />
-        <link rel="icon" href="/IMG_2757.jpg" />
+        <link rel="icon" href="/IMG_2757.JPG" />
       </Head>  
 
       <div className={styles.container}>
