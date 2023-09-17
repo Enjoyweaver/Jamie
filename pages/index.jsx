@@ -4,7 +4,7 @@ import Head from 'next/head'
 import React, { useEffect, useState } from "react";
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
-import Navbar from '../components/Navbar';
+
 
 export default function Home() {
   // Contract Address & ABI
@@ -163,7 +163,7 @@ export default function Home() {
         buyMeACoffee.off("NewMemo", onNewMemo);
       }
     }
-  }, [contractAddress, contractABI, getMemos]);
+  }, [contractAddress, contractABI]);
 
   return (
     <div className={styles.container}>
@@ -186,84 +186,115 @@ export default function Home() {
           
 
         </main>
-
-        <div className={styles.artworkContainer}>
-          <img
-            src="/IMG_2756.jpg"
-            alt="IMG 2756"
-            width={350}
-            height={500}
-            className={styles.artwork}
-            style={{ marginRight: '10px' }} // Add margin-right for spacing
-          />
-          <img
-            src="/IMG_2757.jpg"
-            alt="IMG 2757"
-            width={350}
-            height={500}
-            className={styles.artwork}
-            style={{ marginRight: '10px' }} // Add margin-right for spacing
-          />
-          <img
-            src="/IMG_2766.jpg"
-            alt="IMG 2766"
-            width={350}
-            height={500}
-            className={styles.artwork}
-          />
+        <div>
+          <picture>
+            <source srcSet="/IMG_2756.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
+            <img
+              src="/IMG_2756.jpg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+          <picture>
+            <source srcSet="/IMG_2757.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
+            <img
+              src="/IMG_2757.jpg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+          <picture>
+            <source srcSet="/IMG_2766.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
+            <img
+              src="/IMG_2766.jpg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
         </div>
 
+        <h1 className={styles.title} style={{ marginTop: '20px', marginBottom: '40px', textAlign: 'center' }}>Future Art</h1>
 
-        <section style={{ marginTop: '50px', marginBottom: '40px', textAlign: 'center' }}>
-          <h1 className={styles.title} style={{ marginTop: '20px', marginBottom: '40px', textAlign: 'center' }}>Future Art</h1>
-          <div className={styles.artworkContainer}>
+        <div>
+          <picture>
+            <source srcSet="/IMG_2759.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <img
-              src="/IMG_2772.jpg"
-              alt="IMG 2772"
+              src="/IMG_2756.jpg"
+              alt="Landscape picture"
               width={350}
               height={500}
-              className={styles.artwork}
+              style={{ marginRight: '30px' }} 
             />
+          </picture>
+          <picture>
+            <source srcSet="/IMG_2769.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
+            <img
+              src="/IMG_2757.jpg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+          <picture>
+            <source srcSet="/IMG_2768.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
+            <img
+              src="/IMG_2766.jpg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+        </div>
+
+        <div>
+          <picture>
+            <source srcSet="/IMG_2771.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
+            <img
+              src="/IMG_2771.jpg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+          <picture>
+            <source srcSet="/IMG_2764.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <img
               src="/IMG_2764.jpg"
-              alt="IMG 2764"
+              alt="Landscape picture"
               width={350}
               height={500}
-              className={styles.artwork}
+              style={{ marginRight: '30px' }} 
             />
-            <Image
-              src="/IMG_2771.jpg"
-              alt="IMG 2771"
+          </picture>
+          <picture>
+            <source srcSet="/IMG_2772.jpg" type="image/avif" />
+            <source srcSet="https://example.com/hero.webp" type="image/webp" />
+            <img
+              src="/IMG_2772.jpg"
+              alt="Landscape picture"
               width={350}
               height={500}
-              className={styles.artwork}
+              style={{ marginRight: '30px' }} 
             />
-          </div>
-
-          <div className={styles.artworkContainer}>
-              <Image
-                src="/IMG_2759.jpg"
-                alt="IMG 2759"
-                width={350}
-                height={500}
-                className={styles.artwork}
-              />
-              <Image
-                src="/IMG_2769.jpg"
-                alt="IMG 2769"
-                width={350}
-                height={500}
-                className={styles.artwork}
-              />
-              <Image
-                src="/IMG_2768.jpg"
-                alt="IMG 2768"
-                width={350}
-                height={500}
-                className={styles.artwork}
-              />
-            </div>
-          </section>
+          </picture>
+        </div>
 
 
         {currentAccount && (<h1>Memos received</h1>)}
@@ -286,7 +317,7 @@ export default function Home() {
           {currentAccount ? (
             <div>
               <form>
-                <div class="formgroup">
+                <div className="formgroup">
                   <label>
                     Name
                   </label>
@@ -300,7 +331,7 @@ export default function Home() {
                     />
                 </div>
                 <br/>
-                <div class="formgroup">
+                <div className="formgroup">
                   <label>
                     Send Jamie a message
                   </label>
