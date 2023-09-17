@@ -188,10 +188,8 @@ export default function Home() {
 
         <div>
           <picture>
-            <source srcSet="./IMG_2756.jpg" type="image/avif" />
-            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <Image
-              src="./IMG_2756.jpg"
+              src="./IMG_2756.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -199,10 +197,8 @@ export default function Home() {
             />
           </picture>
           <picture>
-            <source srcSet="./IMG_2757.jpg" type="image/avif" />
-            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <Image
-              src="./IMG_2757.jpg"
+              src="./IMG_2757.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -210,10 +206,8 @@ export default function Home() {
             />
           </picture>
           <picture>
-            <source srcSet="./IMG_2766.jpg" type="image/avif" />
-            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <Image
-              src="./IMG_2766.jpg"
+              src="./IMG_2766.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -226,10 +220,8 @@ export default function Home() {
 
         <div>
           <picture>
-            <source srcSet="./IMG_2758.jpg" type="image/avif" />
-            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <Image
-              src="./IMG_2758.jpg"
+              src="./IMG_2758.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -237,10 +229,8 @@ export default function Home() {
             />
           </picture>
           <picture>
-            <source srcSet="./IMG_2759.jpg" type="image/avif" />
-            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <Image
-              src="./IMG_2759.jpg"
+              src="./IMG_2759.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -248,10 +238,8 @@ export default function Home() {
             />
           </picture>
           <picture>
-            <source srcSet="/IMG_2768.jpg" type="image/avif" />
-            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <Image
-              src="/IMG_2768.jpg"
+              src="/IMG_2768.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -262,10 +250,8 @@ export default function Home() {
 
         <div>
           <picture>
-            <source srcSet="/IMG_2771.jpg" type="image/avif" />
-            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <Image
-              src="/IMG_2771.jpg"
+              src="/IMG_2771.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -273,8 +259,6 @@ export default function Home() {
             />
           </picture>
           <picture>
-            <source srcSet="/IMG_2764.JPG" type="image/avif" />
-            <source srcSet="https://example.com/hero.webp" type="image/webp" />
             <Image
               src="/IMG_2764.JPG"
               alt="Landscape picture"
