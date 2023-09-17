@@ -170,7 +170,7 @@ export default function Home() {
       <Head>
         <title>Jamie&apos;s Art</title>
         <meta name="description" content="Tipping site" />
-        <link rel="icon" href="/IMG_2757.JPG" />
+        <link rel="icon" href="/IMG_2757.jpg" />
       </Head>  
 
       <div className={styles.container}>
@@ -189,7 +189,7 @@ export default function Home() {
         <div>
           <picture>
             <Image
-              src="./IMG_2756.JPG"
+              src="/IMG_2756.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -198,7 +198,7 @@ export default function Home() {
           </picture>
           <picture>
             <Image
-              src="./IMG_2757.JPG"
+              src="/IMG_2757.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -207,7 +207,7 @@ export default function Home() {
           </picture>
           <picture>
             <Image
-              src="./IMG_2766.JPG"
+              src="/IMG_2766.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -221,7 +221,7 @@ export default function Home() {
         <div>
           <picture>
             <Image
-              src="./IMG_2758.JPG"
+              src="/IMG_2758.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -230,7 +230,7 @@ export default function Home() {
           </picture>
           <picture>
             <Image
-              src="./IMG_2759.JPG"
+              src="/IMG_2759.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
