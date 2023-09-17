@@ -163,7 +163,7 @@ export default function Home() {
         buyMeACoffee.off("NewMemo", onNewMemo);
       }
     }
-  }, [contractAddress, contractABI]);
+  }, [contractAddress, contractABI, getMemos]);
 
   return (
     <div className={styles.container}>
@@ -183,14 +183,14 @@ export default function Home() {
           <h2 className={styles.title} style={{ marginTop: '20px', textAlign: 'center' }}>
             A few examples 
           </h2>
-          
-
         </main>
+        
+
         <div>
           <picture>
             <source srcSet="/IMG_2756.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
+            <Image
               src="/IMG_2756.jpg"
               alt="Landscape picture"
               width={350}
@@ -201,7 +201,7 @@ export default function Home() {
           <picture>
             <source srcSet="/IMG_2757.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
+            <Image
               src="/IMG_2757.jpg"
               alt="Landscape picture"
               width={350}
@@ -212,7 +212,7 @@ export default function Home() {
           <picture>
             <source srcSet="/IMG_2766.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
+            <Image
               src="/IMG_2766.jpg"
               alt="Landscape picture"
               width={350}
@@ -226,10 +226,10 @@ export default function Home() {
 
         <div>
           <picture>
-            <source srcSet="/IMG_2759.jpg" type="image/avif" />
+            <source srcSet="/IMG_2758.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
-              src="/IMG_2756.jpg"
+            <Image
+              src="/IMG_2758.jpg"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -237,10 +237,10 @@ export default function Home() {
             />
           </picture>
           <picture>
-            <source srcSet="/IMG_2769.jpg" type="image/avif" />
+            <source srcSet="/IMG_2759.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
-              src="/IMG_2757.jpg"
+            <Image
+              src="/IMG_2759.jpg"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -250,8 +250,8 @@ export default function Home() {
           <picture>
             <source srcSet="/IMG_2768.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
-              src="/IMG_2766.jpg"
+            <Image
+              src="/IMG_2768.jpg"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -264,7 +264,7 @@ export default function Home() {
           <picture>
             <source srcSet="/IMG_2771.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
+            <Image
               src="/IMG_2771.jpg"
               alt="Landscape picture"
               width={350}
@@ -275,7 +275,7 @@ export default function Home() {
           <picture>
             <source srcSet="/IMG_2764.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
+            <Image
               src="/IMG_2764.jpg"
               alt="Landscape picture"
               width={350}
@@ -286,7 +286,7 @@ export default function Home() {
           <picture>
             <source srcSet="/IMG_2772.jpg" type="image/avif" />
             <source srcSet="https://example.com/hero.webp" type="image/webp" />
-            <img
+            <Image
               src="/IMG_2772.jpg"
               alt="Landscape picture"
               width={350}
@@ -302,16 +302,16 @@ export default function Home() {
         {currentAccount && (memos.map((memo, idx) => {
           return (
             <div key={idx} style={{border:"2px solid", "border-radius":"5px", padding: "5px", margin: "5px"}}>
-              <p style={{"font-weight":"bold"}}>"{memo.message}"</p>
+              <p style={{fontWeight:"bold"}}>"{memo.message}"</p>
               <p>From: {memo.name} at {memo.timestamp.toString()}</p>
             </div>
           )
         }))}
 
 
-      <h2 className={styles.title} style={{ marginTop: '100px', marginBottom: '20px',  textAlign: 'center' }}>
-        If you'd like, you can donate to Jamie&apos;s art fund below.
-      </h2>
+        <h2 className={styles.title} style={{ marginTop: '100px', marginBottom: '20px',  textAlign: 'center' }}>
+          If you&apos;d like, you can donate to Jamie&apos;s art fund below.
+        </h2>
 
         <div style={{ marginBottom: '100px', textAlign: 'center' }} >
           {currentAccount ? (
