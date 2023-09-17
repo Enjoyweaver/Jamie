@@ -2,10 +2,8 @@ import abi from '../utils/BuyMeACoffee.json';
 import { ethers } from "ethers";
 import Head from 'next/head'
 import React, { useEffect, useState } from "react";
-import styles from '../styles/Home.module.css'
-import img2756 from '../public/IMG_2756.jpg';
-import img2757 from '../public/IMG_2757.jpg';
-import img2766 from '../public/IMG_2766.jpg';
+import styles from '../styles/Home.module.css';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 
 export default function Home() {
@@ -190,25 +188,83 @@ export default function Home() {
         </main>
 
         <div className={styles.artworkContainer}>
-          <img src="/IMG_2756.jpg" alt="IMG 2756" className={styles.artwork} />
-          <img src="/IMG_2757.jpg" alt="IMG 2757" className={styles.artwork} />
-          <img src="/IMG_2766.jpg" alt="IMG 2766" className={styles.artwork} />
+          <img
+            src="/IMG_2756.jpg"
+            alt="IMG 2756"
+            width={350}
+            height={500}
+            className={styles.artwork}
+            style={{ marginRight: '10px' }} // Add margin-right for spacing
+          />
+          <img
+            src="/IMG_2757.jpg"
+            alt="IMG 2757"
+            width={350}
+            height={500}
+            className={styles.artwork}
+            style={{ marginRight: '10px' }} // Add margin-right for spacing
+          />
+          <img
+            src="/IMG_2766.jpg"
+            alt="IMG 2766"
+            width={350}
+            height={500}
+            className={styles.artwork}
+          />
         </div>
 
-        <section  style={{ marginTop: '50px', marginBottom: '40px', textAlign: 'center' }}>
+
+        <section style={{ marginTop: '50px', marginBottom: '40px', textAlign: 'center' }}>
           <h1 className={styles.title} style={{ marginTop: '20px', marginBottom: '40px', textAlign: 'center' }}>Future Art</h1>
           <div className={styles.artworkContainer}>
-            <img src="/IMG_2772.jpg" alt="IMG 2772" className={styles.artwork} />
-            <img src="/IMG_2764.jpg" alt="IMG 2764" className={styles.artwork} />
-            <img src="/IMG_2771.jpg" alt="IMG 2771" className={styles.artwork} />
+            <img
+              src="/IMG_2772.jpg"
+              alt="IMG 2772"
+              width={350}
+              height={500}
+              className={styles.artwork}
+            />
+            <img
+              src="/IMG_2764.jpg"
+              alt="IMG 2764"
+              width={350}
+              height={500}
+              className={styles.artwork}
+            />
+            <Image
+              src="/IMG_2771.jpg"
+              alt="IMG 2771"
+              width={350}
+              height={500}
+              className={styles.artwork}
+            />
           </div>
 
           <div className={styles.artworkContainer}>
-            <img src="/IMG_2759.jpg" alt="IMG 2759" className={styles.artwork} />
-            <img src="/IMG_2769.jpg" alt="IMG 2769" className={styles.artwork} />
-            <img src="/IMG_2768.jpg" alt="IMG 2768" className={styles.artwork} />
-          </div>
-        </section>
+              <Image
+                src="/IMG_2759.jpg"
+                alt="IMG 2759"
+                width={350}
+                height={500}
+                className={styles.artwork}
+              />
+              <Image
+                src="/IMG_2769.jpg"
+                alt="IMG 2769"
+                width={350}
+                height={500}
+                className={styles.artwork}
+              />
+              <Image
+                src="/IMG_2768.jpg"
+                alt="IMG 2768"
+                width={350}
+                height={500}
+                className={styles.artwork}
+              />
+            </div>
+          </section>
+
 
         {currentAccount && (<h1>Memos received</h1>)}
 
