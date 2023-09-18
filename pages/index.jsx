@@ -79,7 +79,7 @@ export default function Home() {
         const coffeeTxn = await buyMeACoffee.buyCoffee(
           name ? name : "anon",
           message ? message : "Your art inspires me!",
-          {value: ethers.utils.parseEther("0.001")}
+          {value: ethers.utils.parseEther("10")}
         );
 
         await coffeeTxn.wait();
@@ -390,7 +390,7 @@ export default function Home() {
 
                   <textarea
                     rows={3}
-                    placeholder="Enjoy your vape!"
+                    placeholder="Your art inspires me!"
                     id="message"
                     onChange={onMessageChange}
                     required
@@ -402,7 +402,7 @@ export default function Home() {
                     type="button"
                     onClick={buyCoffee}
                   >
-                    Send 0.001ETH For Vape
+                    Send 10 FTM to support Jamies Art
                   </button>
                 </div>
               </form>
