@@ -363,7 +363,7 @@ export default function Home() {
 
 
         <h2 className={styles.title} style={{ marginTop: '100px', marginBottom: '20px',  textAlign: 'center' }}>
-          If you&apos;d like, you can donate either Ethereum or Fantom to Jamie&apos;s art fund below. Jamie&apos;s wallet address is already entered, so just connect your wallet and send.
+          If you&apos;d like, you can donate either Ethereum or Fantom to Jamie&apos;s art by entering a value and hitting send.
         </h2>
 
         <div style={{ marginBottom: '100px', textAlign: 'center' }} >
@@ -412,7 +412,7 @@ export default function Home() {
                     type="button"
                     onClick={buyCoffee}
                   >
-                    Send {tokenAmount} FTM to support Jamies Art
+                    Send {tokenAmount} Eth or FTM to support Jamie
                   </button>
                 </div>
               </form>
