@@ -178,7 +178,7 @@ export default function Home() {
           <h2 className={styles.title}>About Jamie</h2>
           <p style={{ maxWidth: '600px', textAlign: 'center' }}>
             Jamie is an artist creating physical pieces that 
-            will be transformed into digital art for collectors to purchase. Each digital art piece is one-of-a-kind, and only one version is available for purchase.
+            will be transformed into digital art for collectors to purchase. Each digital art piece is one-of-a-kind, and only one version will be available for purchase.
           </p>
           <h2 className={styles.title} style={{ marginTop: '20px', textAlign: 'center' }}>
             A few examples 
@@ -250,7 +250,7 @@ export default function Home() {
         <div>
           <picture>
             <Image
-              src="/IMG_2758.JPG"
+              src="/IMG_2761.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
@@ -280,7 +280,7 @@ export default function Home() {
         <div>
           <picture>
             <Image
-              src="/IMG_2771.JPG"
+              src="/IMG_2769.JPG"
               alt="Landscape picture"
               width={350}
               height={500}
