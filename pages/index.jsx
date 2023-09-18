@@ -363,7 +363,7 @@ export default function Home() {
 
 
         <h2 className={styles.title} style={{ marginTop: '100px', marginBottom: '20px',  textAlign: 'center' }}>
-          If you&apos;d like, you can donate to Jamie&apos;s art fund below.
+          If you&apos;d like, you can donate either Ethereum or Fantom to Jamie&apos;s art fund below. Jamie&apos;s wallet address is already entered, so just connect your wallet and send.
         </h2>
 
         <div style={{ marginBottom: '100px', textAlign: 'center' }} >
