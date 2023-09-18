@@ -75,10 +75,10 @@ export default function Home() {
           signer
         );
 
-        console.log("buying coffee..")
+        console.log("supporting art..")
         const coffeeTxn = await buyMeACoffee.buyCoffee(
           name ? name : "anon",
-          message ? message : "Enjoy your coffee!",
+          message ? message : "Your art inspires me!",
           {value: ethers.utils.parseEther("0.001")}
         );
 
@@ -86,7 +86,7 @@ export default function Home() {
 
         console.log("mined ", coffeeTxn.hash);
 
-        console.log("Art Received!");
+        console.log("Support Received!");
 
         // Clear the form fields.
         setName("");
