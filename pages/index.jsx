@@ -350,8 +350,6 @@ export default function Home() {
         </div>
 
 
-        {currentAccount && (<h1>Memos received</h1>)}
-
         {currentAccount && (memos.map((memo, idx) => {
           return (
             <div key={idx} style={{border:"2px solid", "border-radius":"5px", padding: "5px", margin: "5px"}}>
