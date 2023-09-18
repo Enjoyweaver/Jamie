@@ -412,7 +412,7 @@ export default function Home() {
                     type="button"
                     onClick={buyCoffee}
                   >
-                    Send {tokenAmount} FTM to support Jamie's Art
+                    Send {tokenAmount} FTM to support Jamies Art
                   </button>
                 </div>
               </form>
