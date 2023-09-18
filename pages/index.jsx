@@ -81,7 +81,7 @@ export default function Home() {
         const coffeeTxn = await buyMeACoffee.buyCoffee(
           name ? name : "anon",
           message ? message : "Your art inspires me!",
-          {value: ethers.utils.parseEther(tokenAmount)}
+          {value: ethers.utils.parseEther("tokenAmount")}
         );
 
         await coffeeTxn.wait();
