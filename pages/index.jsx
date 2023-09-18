@@ -185,7 +185,47 @@ export default function Home() {
           </h2>
         </main>
         
-
+        
+        <div>
+          <picture>
+            <Image
+              src="/image5.jpeg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+        </div>
+        <div>
+          <picture>
+            <Image
+              src="/image2.jpeg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+          <picture>
+            <Image
+              src="/image3.jpeg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+          <picture>
+            <Image
+              src="/image4.jpeg"
+              alt="Landscape picture"
+              width={350}
+              height={500}
+              style={{ marginRight: '30px' }} 
+            />
+          </picture>
+        </div>
         <div>
           <picture>
             <Image
