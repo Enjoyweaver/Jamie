@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function Home() {
   // Contract Address & ABI
-  const contractAddress = "to be added";
+  const contractAddress = "0x4Cf621AD06cb16fbf54F900CD00DAE4122bbF2C8";
   const contractABI = abi.abi;
 
   // Component state
