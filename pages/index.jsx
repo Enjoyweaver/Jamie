@@ -84,16 +84,6 @@ export default function Home() {
           {value: ethers.utils.parseEther(tokenAmount)}
         );
 
-        <div>
-          <label>Enter Token Amount:</label>
-          <input
-            type="number"
-            placeholder="Enter Token Amount"
-            value={tokenAmount}
-            onChange={(e) => setTokenAmount(e.target.value)}
-          />
-        </div>
-
         await coffeeTxn.wait();
 
         console.log("mined ", coffeeTxn.hash);
@@ -385,13 +375,12 @@ export default function Home() {
                     Name
                   </label>
                   <br/>
-                  
                   <input
                     id="name"
                     type="text"
                     placeholder="anon"
                     onChange={onNameChange}
-                    />
+                  />
                 </div>
                 <br/>
                 <div className="formgroup">
@@ -399,7 +388,6 @@ export default function Home() {
                     Send Jamie a message
                   </label>
                   <br/>
-
                   <textarea
                     rows={3}
                     placeholder="Your art inspires me!"
@@ -409,15 +397,26 @@ export default function Home() {
                   >
                   </textarea>
                 </div>
+                {/* Add the token amount input field here */}
+                <div>
+                  <label>Enter Token Amount:</label>
+                  <input
+                    type="number"
+                    placeholder="Enter Token Amount"
+                    value={tokenAmount}
+                    onChange={(e) => setTokenAmount(e.target.value)}
+                  />
+                </div>
                 <div>
                   <button
                     type="button"
                     onClick={buyCoffee}
                   >
-                    Send 10 FTM to support Jamies Art
+                    Send {tokenAmount} FTM to support Jamie's Art
                   </button>
                 </div>
               </form>
+
             </div>
           ) : (
             <button onClick={connectWallet}> Connect Wallet</button>
