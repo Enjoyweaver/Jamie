@@ -62,6 +62,8 @@ export default function Home() {
     }
   }
 
+  const [tokenAmount, setTokenAmount] = useState(""); // Initialize as an empty string
+
   const buyCoffee = async () => {
     try {
       const {ethereum} = window;
@@ -79,8 +81,18 @@ export default function Home() {
         const coffeeTxn = await buyMeACoffee.buyCoffee(
           name ? name : "anon",
           message ? message : "Your art inspires me!",
-          {value: ethers.utils.parseEther("10")}
+          {value: ethers.utils.parseEther(tokenAmount)}
         );
+
+        <div>
+          <label>Enter Token Amount:</label>
+          <input
+            type="number"
+            placeholder="Enter Token Amount"
+            value={tokenAmount}
+            onChange={(e) => setTokenAmount(e.target.value)}
+          />
+        </div>
 
         await coffeeTxn.wait();
 
